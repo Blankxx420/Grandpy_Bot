@@ -3,41 +3,48 @@
     <Head>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="../CSS/style.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
         <title>Grandpy Bot</title>
     </Head>
     <body>
-        <header>
-            <div id="Titre principal">
-                <h1>Grandpy Bot</h1>
-                <div id="logo_site">
-                    <img src="../Images/logo_robot.jpg" alt="Logo robot"/>
-                    <p>je ne suis qu'un vieux robot mais j'ai beaucoup de savoir !</p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <header>
+                        <div id="Titre principal">
+                            <h1>Grandpy Bot</h1>
+                            <div id="logo_site">
+                                <img src="../Images/logo_robot.jpg" alt="Logo robot"/>
+                                <p>je ne suis qu'un vieux robot mais j'ai beaucoup de savoir !</p>
+                            </div>
+                        </div> 
+                    </header>
                 </div>
             </div>
-        </header>
-    <section>
-        <article>
-            <div id = "chatbox"></div>
-                <div id = "user text">
-                    <form>
-                        <input name="usermsg" type="text" id="usermsg" size="63" />
-                        <input name="submitmsg" type="submit"  id="submitmsg" value="Envoyer" />
-                    </form>
+            <section>
+                <article>
+                    <div id = "chatbox"></div>
+                        <div id = "user text">
+                            <form>
+                                <input name="usermsg" type="text" id="usermsg" size="63" />
+                                <input name="submitmsg" type="submit"  id="submitmsg" value="Envoyer" />
+                            </form>
+                        </div>
+                </article>
+            </section>
+            <footer>
+                <div id="logo_icons">
+                    <div id="logo_github">
+                        <a href="https://github.com/Blankxx420/Grandpy_Bot"><img src="../Images/logo_github.png" alt="logo github"/></a>
+                    </div>
+                    <div id="logo_linkedin">
+                        <a href="https://www.linkedin.com/in/brice-guichou-a52a65198"><img src="../Images/Logo_linkedin.png" alt="logo linkedin"></a>
+                    </div>
+                    <div id="logo_trello">
+                        <a href="https://trello.com/b/4BI5CA2U/grandpy-bot"><img src="../Images/Logo_trello.jpg" alt="logo trello"></a>
+                    </div>
                 </div>
-        </article>
-    </section>
-    <footer>
-        <div id="logo_icons">
-            <div id="logo_github">
-                <a href="https://github.com/Blankxx420/Grandpy_Bot"><img src="../Images/logo_github.png" alt="logo github"/></a>
-            </div>
-            <div id="logo_linkedin">
-                <a href="https://www.linkedin.com/in/brice-guichou-a52a65198"><img src="../Images/Logo_linkedin.png" alt="logo linkedin"></a>
-            </div>
-            <div id="logo_trello">
-                <a href="https://trello.com/b/4BI5CA2U/grandpy-bot"><img src="../Images/Logo_trello.jpg" alt="logo trello"></a>
-            </div>
+            </footer>
         </div>
-    </footer>
     </body>
 </html>
