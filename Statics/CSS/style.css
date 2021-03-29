@@ -15,17 +15,25 @@
     overflow:auto;
 }
 
-#logo_github img{
+
+#logo_icons {
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;   
+}
+
+#logo_github img {
     width: 100px;
     height: 100px;
 }
 
 #logo_linkedin img{
     width: 100px;
-    height: 100px;
+    height: 100px;  
 }
+
 
 #logo_trello img{
     width: 100px;
-    height: 100px;
+    height: 100px;   
 }
