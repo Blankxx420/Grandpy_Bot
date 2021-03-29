@@ -16,24 +16,19 @@
 }
 
 
-#logo_icons {
-    display: flex;
-    flex-flow: row ;
-    justify-content: center;   
-}
 
 #logo_github img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 #logo_linkedin img{
-    width: 100px;
-    height: 100px;  
+    width: 70px;
+    height: 70px;
 }
 
 
 #logo_trello img{
-    width: 100px;
-    height: 100px;   
+    width: 70px;
+    height: 70px;
 }
