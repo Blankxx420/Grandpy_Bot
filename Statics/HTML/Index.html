@@ -2,52 +2,49 @@
 <html>
 <Head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="../CSS/style.css"/>
+    <meta name = "viewport" content="width= device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../CSS/style.css"/>
     <title>Grandpy Bot</title>
 </Head>
 <body>
-<div class="container bg-dark">
-    <div class="row">
-        <div class="col">
-            <header>
-                <div id="Titre principal">
-                    <h1>Grandpy Bot</h1>
-                    <div id="logo_site">
-                        <img src="../Images/logo_robot.png" alt="Logo robot"/>
-                        <p>je ne suis qu'un vieux robot mais j'ai beaucoup de savoir !</p>
-                    </div>
-                    <nav class="col navbar navbar-expand bg-dark navbar-dark">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div id="navbarContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Accueil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Qui suis-je</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </header>
+<header class="container-fluid bg-dark">
+    <div class = "row">
+        <div class="col text-center text-white" id="text-header">
+            <img src="../Images/logo_robot.png" alt="logo grandpy" width="50">
+            <h1>Grandpy Bot</h1>
+            <p> je ne suis que un petit robot mais j'ai beaucoup de savoir !</p>
         </div>
     </div>
-</div>
-    <section>
-        <div id = "chatbox"></div>
-            <div id = "user text">
-                <form>
-                    <input name="usermsg" type="text" id="usermsg" size="63" />
-                    <input name="submitmsg" type="submit"  id="submitmsg" value="Envoyer" />
-                </form>
+    <div class="row">
+        <nav class="col navbar navbar-expand bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Qui suis-je</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+    </div>
+</header>
+<section class="container">
+    <div class="row border border-dark rounded" id="all-chatbox">
+        <div class="chatbox col-12 answerer text_right">
+            Salut tu cherches un lieu ? laisse moi t'aider!
+        </div>
+    </div>
+    <input class="" id ="question-value" type="text">
+    <button class="btn btn-primary btn-sm" id="ask-question"> Envoyé </button>
     </section>
-    <footer class="container bg-dark">
-        <div class="row">
+    <footer class="container-fluid bg-dark">
+        <div class="row border border-dark">
             <div class="col-4">
                 <div id="logo_github">
                     <a href = "https://github.com/Blankxx420/Grandpy_Bot"><img src = "../Images/logo_github.png" alt = "link github"/></a>
@@ -65,5 +62,8 @@
             </div>
         </div>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="../Javascript/index.js"></script>
+
 </body>
 </html>
