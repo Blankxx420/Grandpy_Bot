@@ -9,11 +9,11 @@
     height: 70px;
 }
 .answerer {
- margin: auto;
  background: aquamarine;
 }
 .asker {
-    background: green;
+    background: antiquewhite;
+    text-align: right;
 }
 
 .chatbox {
@@ -31,6 +31,10 @@
     height: 70px;
 }
 
-#user_text{
- text_align: center;
+#question-block{
+   text-align: center;
+}
+footer{
+ position: absolute;
+ bottom: 0;
 }
