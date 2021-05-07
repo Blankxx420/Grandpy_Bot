@@ -12,7 +12,8 @@ def index():
 
 @app.route('/question', methods=['POST'])
 def question():
-    questiont = request.data('questionText')
-    return json.dumps({'status': 'ok', 'question': questiont})
+    questiont = request.form['question']
+    question_ask = json.dumps({'status': 'ok', 'question': questiont})
+    return question_ask
 
 
