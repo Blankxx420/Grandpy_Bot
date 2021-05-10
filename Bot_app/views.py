@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, json
+from Bot_app.parser import Parser
 
 app = Flask(__name__)
 
@@ -14,6 +15,7 @@ def index():
 def question():
     questiont = request.form['question']
     question_ask = json.dumps({'status': 'ok', 'question': questiont})
-    return question_ask
+    parse = Parser()
+    parse.delete_all_symbols(question_ask)
 
 
