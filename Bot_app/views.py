@@ -14,8 +14,5 @@ def index():
 @app.route('/question', methods=['POST'])
 def question():
     questiont = request.form['question']
-    question_ask = json.dumps({'status': 'ok', 'question': questiont})
-    parse = Parser()
-    parse.delete_all_symbols(question_ask)
-
-
+    Parser(questiont)
+    return questiont
