@@ -45,3 +45,4 @@ class Parser:
         for words in self.stop_word:
             if words in self.question:
                 self.question.remove(words)
+        print(self.question)
