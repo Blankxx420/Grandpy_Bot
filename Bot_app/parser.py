@@ -7,7 +7,7 @@
 """
 import re
 from Bot_app.stopword import STOPWORDS
-from Bot_app.config import PUNCTUATION
+from config import PUNCTUATION
 
 
 class Parser:
