@@ -1,5 +1,4 @@
 from Bot_app.stopword import STOPWORDS
-import re
 
 
 def test_sentence_lower():
@@ -12,4 +11,7 @@ def test_remove_stopword():
     for word in STOPWORDS:
         if word in question:
             assert question.remove(word)
+            print(question)
 
+
+test_remove_stopword()

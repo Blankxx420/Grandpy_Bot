@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request
 from Bot_app.parser import Parser
 
 app = Flask(__name__)
@@ -13,6 +13,6 @@ def index():
 
 @app.route('/question', methods=['POST'])
 def question():
-    questiont = request.form['question']
-    Parser(questiont)
-    return questiont
+    question_text = request.form['question']
+    Parser(question_text)
+    return question_text
