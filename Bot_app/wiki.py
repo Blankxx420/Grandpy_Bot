@@ -22,7 +22,7 @@ class Wiki:
             "inprop": "url",  # get url (added info to prop)
         }
         self.result()
-        self.details = None
+
 
     def result(self):
         result = requests.get(WIKI_API_URL, self.paylod)
@@ -36,7 +36,8 @@ class Wiki:
                 sentence = pages[0]['extract']
                 url = pages[0]['fullurl']
 
-                self.details = {"title": title,
-                                "sentence": sentence,
-                                "url": url
-                                }
+                details = {"title": title,
+                           "sentence": sentence,
+                           "url": url}
+
+                return details

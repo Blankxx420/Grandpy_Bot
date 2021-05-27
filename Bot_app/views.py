@@ -20,6 +20,14 @@ def question():
     geo_map = Map(parser.parsed_question)
     if geo_map.latitude is None or geo_map.longitude is None:
         return {"content": "Missing coordinates"}
-
     wiki = Wiki(geo_map.latitude, geo_map.longitude)
-    print(wiki.details)
+    if wiki is None:
+        return {"content": "No wiki details found"}
+    else:
+        return {
+            "sentence": ["sentence"],
+            "url": wiki["url"],
+            "longitude": geo_map.longitude,
+            "latidude": geo_map.latitude
+        }
+
