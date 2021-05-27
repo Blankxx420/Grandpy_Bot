@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from Bot_app.parser import Parser
 from Bot_app.map import Map
+from Bot_app.wiki import Wiki
 
 app = Flask(__name__)
 
@@ -19,7 +20,6 @@ def question():
     geo_map = Map(parser.parsed_question)
     if geo_map.latitude is None or geo_map.longitude is None:
         return {"content": "Missing coordinates"}
-    else:
-        return {'longitude': geo_map.longitude,
-                'latitude': geo_map.latitude}
 
+    wiki = Wiki(geo_map.latitude, geo_map.longitude)
+    print(wiki.details)
