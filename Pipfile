@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 pytest = "*"
 requests = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"

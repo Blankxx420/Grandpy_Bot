@@ -21,6 +21,7 @@ class Parser:
         self.remove_punctuation()
         self.separate_word()
         self.remove_stop_word()
+        self.parsed_question = self.question
 
     def delete_all_symbols(self):
         """ Remove all symbols"""
