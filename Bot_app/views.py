@@ -24,10 +24,11 @@ def question():
     if wiki is None:
         return {"content": "No wiki details found"}
     else:
-        return {
-            "sentence": ["sentence"],
-            "url": wiki["url"],
+        response = {
+            "sentence": wiki.json_result["sentence"],
+            "url": wiki.json_result["url"],
             "longitude": geo_map.longitude,
             "latidude": geo_map.latitude
         }
-
+        print(response)
+        return response

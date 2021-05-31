@@ -23,7 +23,6 @@ class Wiki:
         }
         self.result()
 
-
     def result(self):
         result = requests.get(WIKI_API_URL, self.paylod)
         if result.status_code == 200:
@@ -36,8 +35,8 @@ class Wiki:
                 sentence = pages[0]['extract']
                 url = pages[0]['fullurl']
 
-                details = {"title": title,
-                           "sentence": sentence,
-                           "url": url}
+                self.json_result = {"title": title,
+                                    "sentence": sentence,
+                                    "url": url}
 
-                return details
+                return self.json_result
