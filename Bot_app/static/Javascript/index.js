@@ -10,11 +10,26 @@ $('#ask-question').on('click', function(){
     url: '/question',
     dataType: 'text',
     success: function (response){
-            console.log(response);
+            let details = JSON.parse(response);
+            if("sentence" in details){
+                const longitude = response["longitude"];
+                const latitude = response["latitude"];
+                const wiki_url = response["url"];
+                const sentence = response["sentence"];
+                let bot_response = "<div class='chatbox col-12 a text-left'>" + sentence + wiki_url + "</div"
+                $('#all-chatbox').append(bot_response)
+            }
+
+            // récupéré les variables
+            // créer la div bot reponse
+            //initialiser la map
+            // mettre en form la reponse
+            //ajouter la reponse dans la divs avec un retardateur de 500ms
+
+
     },
     error:  function(error){
 			console.log(error);
 	},
     });
 });
-
