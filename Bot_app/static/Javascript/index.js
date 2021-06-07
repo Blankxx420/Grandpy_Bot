@@ -10,12 +10,14 @@ $('#ask-question').on('click', function(){
     url: '/question',
     dataType: 'text',
     success: function (response){
+            console.log(response)
             let details = JSON.parse(response);
+            console.log(details)
             if("sentence" in details){
-                const longitude = response["longitude"];
-                const latitude = response["latitude"];
-                const wiki_url = response["url"];
-                const sentence = response["sentence"];
+                const longitude = response.longitude;
+                const latitude = response.latitude;
+                const wiki_url = response.url;
+                const sentence = response.sentence;
                 let bot_response = "<div class='chatbox col-12 a text-left'>" + sentence + wiki_url + "</div"
                 $('#all-chatbox').append(bot_response)
             }
