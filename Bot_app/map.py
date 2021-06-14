@@ -27,8 +27,8 @@ class Map:
 
             if len(json_result['features']) > 0:
 
-                self.longitude = \
+                self.latitude = \
                     json_result['features'][0]['geometry']['coordinates'][1]
 
-                self.latitude = \
+                self.longitude = \
                     json_result['features'][0]['geometry']['coordinates'][0]
