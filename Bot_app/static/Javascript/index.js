@@ -1,4 +1,4 @@
-import { Map } from "./map";
+import { Map } from "./map.js";
 $('#ask-question').on('click', function(){
     const questionText = $('#question-value').val()
     let questions = "<div class='chatbox col-12 asker text-right'>" + questionText + '<img src="../static/Images/user_avatar.png" class="float-right" alt="user_avatar" width="50">' + "</div>"
@@ -16,8 +16,8 @@ $('#ask-question').on('click', function(){
                 const latitude = details.latitude;
                 const wiki_url = details.url;
                 const sentence = details.sentence;
-                new Map(longitude, latitude)
-                Map.add_map()
+                let map = new Map(longitude, latitude)
+                map.add_map()
             }
     },
     error:  function(error){
