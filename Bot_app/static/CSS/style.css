@@ -9,10 +9,10 @@
     height: 70px;
 }
 .answerer {
- background: aquamarine;
+ background: #54c935;
 }
 .asker {
-    background: antiquewhite;
+    background: #5d646a;
     text-align: right;
 }
 
@@ -35,6 +35,13 @@
    text-align: center;
 }
 footer{
- position:  relative;
+ position:  absolute;
  bottom : 0;
+}
+
+#map{
+    margin: 0 auto;
+    width: 300px;
+    height: 100%;
+
 }

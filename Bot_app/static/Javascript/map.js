@@ -4,21 +4,20 @@ export class Map{
         this.long = longitude;
         this.lat = latitude;
         this.zoom = 6;
-    }
-    
-    init_map(){
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYmxhbmt4eCIsImEiOiJja3A1bm40bjYwaWs5MnRxdHdua2JiazNyIn0.iFNN7eAz04uWKAazMhjHQQ';
-        var map = new mapboxgl.Map({
-            container: "map",
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [this.long, this.lat],
-            zoom: this.zoom,
-        })
-        var marker = new mapboxgl.Marker()
-                .setLngLat([this.long, this.lat])
-                .addTo(map)
-            
+        this.init_map()
+
     }
 
-    
-}; 
+    init_map(){
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYmxhbmt4eCIsImEiOiJja3A1bmtyejcyaTk0MnltY3g5ZjNqNGFwIn0.VXk6UtX9Ht11FuDPeV4lug';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [this.long, this.lat], // starting position [lng, lat]
+            zoom: this.zoom // starting zoom
+        });
+        const marker = new mapboxgl.Marker()
+            .setLngLat([this.long, this.lat])
+            .addTo(map);
+    }
+}
