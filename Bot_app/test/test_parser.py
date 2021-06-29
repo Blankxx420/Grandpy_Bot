@@ -1,32 +1,17 @@
-from Bot_app.stopword import STOPWORDS
-from config import PUNCTUATION
-import re
+from Bot_app.parser import Parser
 
 
-def test_remove_punctuation():
-    question = "je suis là/ depuis bien longtemps !?"
-    for char in question:
-        if char in PUNCTUATION:
-            assert question.replace(char, " ")
+question_1 = "où se trouve Paris ?"
+question_2 = "montre-moi Bordeaux"
 
 
-def test_sentence_lower():
-    question = "A la recherche du Louvres"
-    assert question.lower()
+def test_parser_question_1():
+    parser = Parser(question_1)
+    assert parser.parsed_question == ["trouve", 'paris']
 
 
-def test_remove_all_symbols():
-    question = "@paris ="
-    assert re.sub("r/W", " ", question)
+def test_parser_question_2():
+    parser = Parser(question_2)
+    assert parser.parsed_question == ["montre-moi", "bordeaux"]
 
 
-def test_separate_word():
-    question = "ou est paris"
-    assert question.split(" ")
-
-
-def test_remove_stopword():
-    question = ["je suis à la recherche ainsi de paris"]
-    for word in STOPWORDS:
-        if word in question:
-            assert question.remove(word)
