@@ -24,7 +24,6 @@ class Map:
 
         if result.status_code == 200:
             json_result = result.json()
-            print(json_result)
 
             if len(json_result['features']) > 0:
 

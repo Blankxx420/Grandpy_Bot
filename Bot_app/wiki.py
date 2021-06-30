@@ -27,6 +27,7 @@ class Wiki:
         result = requests.get(WIKI_API_URL, self.paylod)
         if result.status_code == 200:
             self.json_result = result.json()
+            print(result.json())
             if 'query' in self.json_result:
                 pages = self.json_result['query']['pages']
                 pages = (list(pages.values()))
@@ -38,5 +39,4 @@ class Wiki:
                 self.json_result = {"title": title,
                                     "sentence": sentence,
                                     "url": url}
-
                 return self.json_result
