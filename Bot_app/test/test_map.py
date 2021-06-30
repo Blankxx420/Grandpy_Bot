@@ -7,7 +7,7 @@ def test_get_coordinates_success(monkeypatch):
     class MockResponse:
 
         def __init__(self):
-            self.status_code = "200"
+            self.status_code = 200
 
         @staticmethod
         def json():
@@ -71,8 +71,8 @@ def test_get_coordinates_success(monkeypatch):
 
     monkeypatch.setattr(requests, 'get', get_coordinate)
 
-    request = Map("paris")
-    assert (request.longitude, request.latitude) == (48.85658, 2.35183)
+    request = Map("input")
+    assert request.latitude, request.longitude == (2.35183, 48.85658)
 
 
 def test_get_location_coordinates_failure(monkeypatch):
