@@ -80,7 +80,7 @@ def test_get_location_coordinates_failure(monkeypatch):
     WHEN the HTTP response has failed
     THEN check the HTTP response"""
 
-    class MockResponse:  # object in param?
+    class MockResponse:
         def __init__(self):
             self.status_code = 404
 
