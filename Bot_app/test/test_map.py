@@ -3,6 +3,9 @@ from Bot_app.map import Map
 
 
 def test_get_coordinates_success(monkeypatch):
+    """GIVEN a monkeypatched version of requests.get()
+        WHEN the HTTP response has been successful
+        THEN check the HTTP response"""
 
     class MockResponse:
 
