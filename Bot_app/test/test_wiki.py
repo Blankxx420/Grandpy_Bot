@@ -19,12 +19,19 @@ def test_get_wiki_success(monkeypatch):
                             "ns": 0,
                             "title": "Paris",
                             "index": -1,
-                            "extract": "Paris (/pa.ʁi/) est la commune la plus peuplée et la capitale de la France."
-                                       "\nElle se situe au cœur d'un vaste bassin sédimentaire aux sols fertiles"
-                                       " et au climat tempéré, le bassin parisien, sur une boucle de la Seine,"
-                                       " entre les confluents de celle-ci avec la Marne et l'Oise."
-                                       " Paris est également le chef-lieu de la région Île-de-France"
-                                       " et le centre de la métropole du Grand Paris, créée en 2016.",
+                            "extract": "Paris (/pa.ʁi/) est la commune la "
+                                       "plus "
+                                       "peuplée et la capitale de la France."
+                                       "\nElle se situe au cœur d'un vaste"
+                                       " bassin sédimentaire aux sols fertiles"
+                                       " et au climat tempéré, le bassin"
+                                       "parisien, sur une boucle de la Seine,"
+                                       " entre les confluents de celle-ci"
+                                       "avec la Marne et l'Oise."
+                                       " Paris est également le chef-lieu"
+                                       " de la région Île-de-France"
+                                       " et le centre de la métropole du"
+                                       " Grand Paris, créée en 2016.",
                             "contentmodel": "wikitext",
                             "pagelanguage": "fr",
                             "pagelanguagehtmlcode": "fr",
@@ -33,8 +40,10 @@ def test_get_wiki_success(monkeypatch):
                             "lastrevid": 184122607,
                             "length": 408610,
                             "fullurl": "https://fr.wikipedia.org/wiki/Paris",
-                            "editurl": "https://fr.wikipedia.org/w/index.php?title=Paris&action=edit",
-                            "canonicalurl": "https://fr.wikipedia.org/wiki/Paris"
+                            "editurl": "https://fr.wikipedia.org/w/index.php? "
+                                       "title=Paris&action=edit",
+                            "canonicalurl": "https://fr.wikipedia.org/wiki/"
+                                            " Paris"
                         },
                     },
                 }
@@ -65,11 +74,16 @@ def test_get_wiki_success(monkeypatch):
     result = request.json_result
     expected_result = {
         'title': 'Paris',
-        'sentence': "Paris (/pa.ʁi/) est la commune la plus peuplée et la capitale de la France."
-                    "\nElle se situe au cœur d'un vaste bassin sédimentaire aux sols fertiles et au climat tempéré,"
-                    " le bassin parisien, sur une boucle de la Seine, entre les confluents de"
-                    " celle-ci avec la Marne et l'Oise. Paris est également le chef-lieu de la région"
-                    " Île-de-France et le centre de la métropole du Grand Paris, créée en 2016.",
+        'sentence': "Paris (/pa.ʁi/) est la commune la plus peuplée"
+                    " et la capitale de la France."
+                    "\nElle se situe au cœur d'un vaste bassin sédimentaire"
+                    " aux sols fertiles et au climat tempéré,"
+                    " le bassin parisien, sur une boucle de la Seine,"
+                    " entre les confluents de"
+                    " celle-ci avec la Marne et l'Oise."
+                    " Paris est également le chef-lieu de la région"
+                    " Île-de-France et "
+                    "le centre de la métropole du Grand Paris, créée en 2016.",
         'url': 'https://fr.wikipedia.org/wiki/Paris'
     }
 

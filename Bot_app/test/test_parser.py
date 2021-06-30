@@ -13,5 +13,3 @@ def test_parser_question_1():
 def test_parser_question_2():
     parser = Parser(question_2)
     assert parser.parsed_question == ["montre-moi", "bordeaux"]
-
-
