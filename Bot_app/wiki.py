@@ -8,6 +8,7 @@ from config import WIKI_API_URL
 
 
 class Wiki:
+    """ Class that represent Wikipédia Api"""
 
     def __init__(self, latitude, longitude):
         self.json_result = None
@@ -24,6 +25,8 @@ class Wiki:
         self.result()
 
     def result(self):
+        """call Wikipedia Api according coordinates and
+         select 1 sentence,url and title"""
         result = requests.get(WIKI_API_URL, self.paylod)
         if result.status_code == 200:
             self.json_result = result.json()

@@ -1,3 +1,5 @@
+""" File that contains Stopword for the Parser"""
+
 STOPWORDS = ["a", "abord", "absolument", "afin", "ah", "ai", "aie", "ailleurs",
              "ainsi", "ait", "allaient", "allo", "allons", "allô", "alors",
              "anterieur", "anterieure", "anterieures", "apres", "après", "as",

@@ -10,11 +10,14 @@ app.config.from_object("config")
 
 @app.route('/')
 def index():
+    """base route"""
     return render_template("index.html")
 
 
 @app.route('/question', methods=['POST'])
 def question():
+    """route for get a question and return data for index.js"""
+
     question_text = request.form['question']
     parser = Parser(question_text)
     geo_map = Map(parser.parsed_question)

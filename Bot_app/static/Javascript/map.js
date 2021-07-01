@@ -1,3 +1,4 @@
+
 export class Map{
 
     constructor(longitude,latitude){
@@ -16,6 +17,8 @@ export class Map{
             center: [this.long, this.lat], // starting position [lng, lat]
             zoom: this.zoom // starting zoom
         });
+
+        // adding a marker according to coordinates
         const marker = new mapboxgl.Marker()
             .setLngLat([this.long, this.lat])
             .addTo(map);
