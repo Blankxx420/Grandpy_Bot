@@ -7,7 +7,9 @@ Pourtant, j'adore ses récits ! J'ai beaucoup appris et rêvé d'autres contrée
 2. Use command ``pipenv install``
 3. Use command ``python run.py``
 
-#Cahier des charges :books:
+
+# Cahier des charges :books:
+
 ### Fonctionnalités
 - Interactions en AJAX : l'utilisateur envoie sa question en appuyant sur entrée et la réponse s'affiche directement dans l'écran, sans recharger la page.
 Vous utiliserez l'API de Google Maps et celle de Media Wiki.
