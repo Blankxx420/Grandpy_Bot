@@ -26,5 +26,5 @@ L'utilisateur ouvre son navigateur et entre l'URL que vous lui avez fournie. Il 
 
 - GrandPy envoie un nouveau message : "Mais t'ai-je déjà raconté l'histoire de ce quartier qui m'a vu en culottes courtes ? La cité Paradis est une voie publique située dans le 10e arrondissement de Paris. Elle est en forme de té, une branche débouche au 43 rue de Paradis, la deuxième au 57 rue d'Hauteville et la troisième en impasse. [En savoir plus sur Wikipedia]"
   
-# Auteur 
+# Auteur :black_nib:
 Guichou Brice
