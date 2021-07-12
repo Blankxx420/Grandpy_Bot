@@ -1,1 +1,1 @@
-web: gunicorn Bot_app:app
+web: gunicorn views:app
