@@ -12,6 +12,7 @@ pytest = "*"
 requests = "*"
 python-dotenv = "*"
 flake8 = "*"
+heroku = "*"
 
 [requires]
 python_version = "3.8"
