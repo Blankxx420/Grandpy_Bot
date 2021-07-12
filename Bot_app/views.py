@@ -1,11 +1,8 @@
-from flask import Flask, render_template, request
+from flask import render_template, request
 from Bot_app.parser import Parser
+from Bot_app import app
 from Bot_app.map import Map
 from Bot_app.wiki import Wiki
-
-app = Flask(__name__)
-
-app.config.from_object("config")
 
 
 @app.route('/')
