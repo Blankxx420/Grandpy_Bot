@@ -6,6 +6,7 @@ from Bot_app.wiki import Wiki
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     """base route"""
     return render_template("index.html")
